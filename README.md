@@ -1,5 +1,17 @@
 # Lab2_Robotica
-## Por: Julian Luna y Javier Caicedo
+#### Por: Julian Luna y Javier Caicedo
+
+### Requerimientos:
++ Ubuntu version 20.xx, preferiblemente 20.04 LTS
++ ROS Kinetic
++ MATLAB (Preferiblemente 2020a, aunque se utilizo 2022a)
++ Robotics toolbox de Mathworks
++ Toolbox Robotica de Peter Corke
++ Paquetes de Dynamixel Workbench. https://github.com/fegonzalez7/rob_unal_clase3
++ Paquete del robot Phantom X: https://github.com/felipeg17/px_robot
+
+
++ Robot Phantom X Pincher (4 grados de libertad y un actuador de herramienta)
 ### *a. Analisis:*
 #### *a.1. Parametros DHstd del Robot Phantom X Pincher*
 

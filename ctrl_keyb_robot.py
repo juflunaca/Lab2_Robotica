@@ -70,8 +70,8 @@ def ctrlMove():
             else: 
                 current_joint=joints[0]
                 motor_id=joints.index(current_joint)+1
-            print("Articulación actual: "+current_joint)
-            print("Motor: "+str(motor_id))
+            print("Articulación actual: "+current_joint+"\n")
+            #print("Motor: "+str(motor_id))
         if pressedKey == "s":  #Previous Joint
             motor_id=joints.index(current_joint)+1
             if motor_id>1:
@@ -80,16 +80,16 @@ def ctrlMove():
             else: 
                 current_joint=joints[len(joints)-1]
                 motor_id=joints.index(current_joint)+1
-            print("Articulación actual: "+current_joint)
-            print("Motor: "+str(motor_id))
+            print("Articulación actual: "+current_joint+"\n")
+            #print("Motor: "+str(motor_id))
         if pressedKey == "d":   #Go to target position
             #motor_id=joints.index(current_joint)+1
             jointCommand('', motor_id, 'Goal_Position', pos_target[motor_id-1], 0.5)
-            print("Articulación a pos_target")
+            print("Articulación "+ current_joint +" a pos_target"+"\n")
         if pressedKey == "a":  #Go to Home
             #motor_id=joints.index(current_joint)+1
             jointCommand('', motor_id, 'Goal_Position', pos_home[motor_id-1], 0.5)
-            print("Articulación a pos_home")
+            print("Articulación "+ current_joint +" a pos_home"+"\n")
         
 
 
