@@ -20,10 +20,7 @@ __credits__ = ["Felipe Gonzalez", "Sebastian Realpe", "Jose Manuel Fajardo", "Ro
 
 TERMIOS = termios
 current_joint = "waist"
-<<<<<<< HEAD
 motor_id = 1
-=======
->>>>>>> faf6a12fa606f576bdb8c69649976782e00f042b
 pos_home = [512, 512, 512, 512]
 pos_target = [768, 256, 768, 256]
 
@@ -57,10 +54,7 @@ def jointCommand(command, id_num, addr_name, value, time):
 #Esta función crea un publicador para enviar los parámetros asociados a las rutinas que se invocan con las teclas de control.
 def ctrlMove():
     global current_joint
-<<<<<<< HEAD
     global motor_id
-=======
->>>>>>> faf6a12fa606f576bdb8c69649976782e00f042b
     global pos_target
     global pos_home
     pressedKey=""
@@ -88,19 +82,11 @@ def ctrlMove():
                 motor_id=joints.index(current_joint)+1
             print("Articulación actual: "+current_joint)
             print("Motor: "+str(motor_id))
-<<<<<<< HEAD
         if pressedKey == "d":   #Go to target position
             #motor_id=joints.index(current_joint)+1
             jointCommand('', motor_id, 'Goal_Position', pos_target[motor_id-1], 0.5)
             print("Articulación a pos_target")
         if pressedKey == "a":  #Go to Home
-=======
-        if pressedKey == "d":   #Go to Home
-            #motor_id=joints.index(current_joint)+1
-            jointCommand('', motor_id, 'Goal_Position', pos_target[motor_id-1], 0.5)
-            print("Articulación a pos_target")
-        if pressedKey == "a":  #
->>>>>>> faf6a12fa606f576bdb8c69649976782e00f042b
             #motor_id=joints.index(current_joint)+1
             jointCommand('', motor_id, 'Goal_Position', pos_home[motor_id-1], 0.5)
             print("Articulación a pos_home")
@@ -110,11 +96,8 @@ def ctrlMove():
 
 if __name__== '__main__':
     try:
-<<<<<<< HEAD
         print("Utilice W & S para subir o bajar entre articulaciones.")
         print("Utilice A & D para mover la articulacion a Home o a la posicion objetivo respectivamente.")
-=======
->>>>>>> faf6a12fa606f576bdb8c69649976782e00f042b
         jointCommand('', 1, 'Torque_Limit', 500, 0)
         jointCommand('', 2, 'Torque_Limit', 400, 0)
         jointCommand('', 3, 'Torque_Limit', 300, 0)
